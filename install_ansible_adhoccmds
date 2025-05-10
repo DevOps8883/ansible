@@ -40,7 +40,15 @@ become_method = sudo
 become_user = root
 become_ask_pass = false
 
-#
+# sudo vi /etc/hosts  --------- add ip and hostname of the server to be monitor to byepass DNS issues
+ E.g 192.168.183.133 client.example.com
+
+# ping client.example.com   --- this is the normal pinging
+
+# To ping monitored server
+ansible all -m ping -i inventory
+
+
 
 DIRECTIVEDESCRIPTION
 inventory Specifies the path to the inventory file.
